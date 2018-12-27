@@ -1,6 +1,6 @@
 package test;
 
-public class Stu {
+public class ExceptionTest {
     public static void main(String[] args) {
 
 //        Student student = new Student();
@@ -34,17 +34,4 @@ public class Stu {
         }
     }
 
-}
-
-
-class Student {
-    String name;
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
 }
