@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.bilibili.config:config:2.3.4-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/bilibili/config/config/2.3.4-SNAPSHOT/config-2.3.4-20181226.070644-6.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/bilibili/config/config/2.3.4-SNAPSHOT/config-2.3.4-20181226.070644-6-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/bilibili/config/config/2.3.4-SNAPSHOT/config-2.3.4-20181226.070644-6-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
