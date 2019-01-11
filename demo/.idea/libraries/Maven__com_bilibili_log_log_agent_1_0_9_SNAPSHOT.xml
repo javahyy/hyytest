@@ -1,13 +1,13 @@
 <component name="libraryTable">
   <library name="Maven: com.bilibili.log:log-agent:1.0.9-SNAPSHOT">
     <CLASSES>
-      <root url="jar://$MAVEN_REPOSITORY$/com/bilibili/log/log-agent/1.0.9-SNAPSHOT/log-agent-1.0.9-20180319.033920-15.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/bilibili/log/log-agent/1.0.9-SNAPSHOT/log-agent-1.0.9-SNAPSHOT.jar!/" />
     </CLASSES>
     <JAVADOC>
-      <root url="jar://$MAVEN_REPOSITORY$/com/bilibili/log/log-agent/1.0.9-SNAPSHOT/log-agent-1.0.9-20180319.033920-15-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/bilibili/log/log-agent/1.0.9-SNAPSHOT/log-agent-1.0.9-SNAPSHOT-javadoc.jar!/" />
     </JAVADOC>
     <SOURCES>
-      <root url="jar://$MAVEN_REPOSITORY$/com/bilibili/log/log-agent/1.0.9-SNAPSHOT/log-agent-1.0.9-20180319.033920-15-sources.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/bilibili/log/log-agent/1.0.9-SNAPSHOT/log-agent-1.0.9-SNAPSHOT-sources.jar!/" />
     </SOURCES>
   </library>
 </component>
