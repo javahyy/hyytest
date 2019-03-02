@@ -7,7 +7,10 @@ public class Stu {
 //        String name = student.getName();
 //        System.out.println(name);
         int[] ary = new int[]{1, 2, 3, 4, 5, 6, 7, 8};
-        testException(ary);
+//        testException(ary);
+        Object num = null;
+
+
     }
 
     public static void testException(int[] ary) {
