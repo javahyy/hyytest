@@ -24,10 +24,18 @@ public class MiaoShaServiceTest {
 //    MiaoshaService miaoshaService;
     MiaoshaService miaoshaService = new MiaoshaService();
 
-
     @Test
     public void testA(){
         miaoshaService.miaosha("bike",null);
+    }
+
+    @Test
+    public void test1()throws InterruptedException{
+       new MiaoShaServiceTest().benchmark();
+    }
+    @Test
+    public void test2()throws InterruptedException{
+            new MiaoShaServiceTest().benchmark();
     }
 
     // 循环创建N个线程，模拟用户请求
@@ -53,14 +61,11 @@ public class MiaoShaServiceTest {
             });
             threads[i] = thread;
             thread.start();
-
             // 倒计时 减一
             countDownLatch.countDown();
         }
-
         // 因为服务器是一直启动的，不会停止，这里不如程序没有足够时间去执行，阻塞等待
-        try {
-            //等待
+        try { //等待
             System.in.read();
         } catch (IOException e) {
             e.printStackTrace();

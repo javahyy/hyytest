@@ -1,27 +1,25 @@
-package review.miaosha.删除;
+package review.miaosha.config;
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
-import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.PropertyAccessor;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.SerializationFeature;
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.dao.DataAccessException;
-import org.springframework.data.redis.connection.RedisConnection;
 import org.springframework.data.redis.connection.RedisConnectionFactory;
-import org.springframework.data.redis.connection.RedisSentinelConnection;
 import org.springframework.data.redis.connection.jedis.JedisConnectionFactory;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.data.redis.serializer.Jackson2JsonRedisSerializer;
-import org.springframework.data.redis.serializer.StringRedisSerializer;
-import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;
 import redis.clients.jedis.JedisPoolConfig;
+import redis.clients.jedis.JedisShardInfo;
 
 @Configuration
 public class ConfigUtils {
+    private static ConfigUtils configUtils = new ConfigUtils();
+    public static RedisTemplate<String,String> StringRedisTemplate(){
+        StringRedisTemplate stringStringRedisTemplate = new StringRedisTemplate(configUtils.getRedisConnectionFactory());
+        return stringStringRedisTemplate;
+    }
 
 //    @Bean
     public RedisTemplate<String, String> redisTemplate(RedisConnectionFactory factory) {
@@ -47,16 +45,19 @@ public class ConfigUtils {
         // 1-1)构造连接池配置
         JedisPoolConfig config = new JedisPoolConfig();
         //修改最大连接数
-        config.setMaxTotal(20);
-
+        config.setMaxTotal(500);
+        config.setMaxIdle(80);
+        config.setMaxWaitMillis(10000);
+        config.setTestOnBorrow(true);
         // 1-2)连接池配置
-        JedisPool pool = new JedisPool(config,"192.168.1.102",6379);
+        JedisPool pool = new JedisPool(config,"127.0.0.1",6379);
         //获得jedis对象
 //        Jedis jedis = pool.getResource();  这个就可以直接操作redis了
-        jedisConnectionFactory.setHostName("192.168.1.102");
-        jedisConnectionFactory.setPort(6379);
+//        jedisConnectionFactory.setHostName("hyy-redis");//主机名
+//        jedisConnectionFactory.setPort(6379);
 //        jedisConnectionFactory.setPassword();
         jedisConnectionFactory.setPoolConfig(config);
+        jedisConnectionFactory.setShardInfo(new JedisShardInfo("127.0.0.1",6379));
         return jedisConnectionFactory;
     }
 

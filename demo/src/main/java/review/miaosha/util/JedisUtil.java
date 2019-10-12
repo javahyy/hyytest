@@ -21,11 +21,26 @@ public class JedisUtil {
 
     /* 对key的操作方法 */
     /*从jedispool中获取jedis对象*/
+//    public static Jedis getJedis() {
+//        JedisPoolConfig config = new JedisPoolConfig();
+//        //修改最大连接数
+//        config.setMaxTotal(20);
+//        JedisPool jedisPool = new JedisPool(config, "127.0.0.1", 6379);
+//        return jedisPool.getResource();
+//    }
+
     public static Jedis getJedis() {
         JedisPoolConfig config = new JedisPoolConfig();
         //修改最大连接数
         config.setMaxTotal(20);
-        JedisPool jedisPool = new JedisPool(config, "127.0.0.1", 6379);
+        JedisPool jedisPool = null;
+        try {
+            if (jedisPool != null) {
+                jedisPool = new JedisPool(config, "127.0.0.1", 6379);
+            }
+        }catch (Exception e) {
+           e.printStackTrace();
+        }
         return jedisPool.getResource();
     }
 
