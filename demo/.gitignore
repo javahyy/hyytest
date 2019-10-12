@@ -1,24 +1,5 @@
-demo.iml
-target/**
-.classpath
-.mymetadata
-.project
-.class
-.gitignore.bak
-.settings/**
-backup/**
-debug.sh
-.idea
-bak/**
-**/target/**
-out/**
-*.iml
-classes/**
-*.DS_Store
-*.settings/**
-
-
 # maven ignore
+# target下所有目录及文件
 target/
 *.jar
 *.war
@@ -32,10 +13,24 @@ target/
 .classpath
 
 # idea ignore
-.idea/s
+.idea/
 *.ipr
 *.iml
 *.iws
+
+.settings/**
+**/target/**
+out/**
+classes/**
+bak/**
+.gitignore.bak
+.classpath
+.mymetadata
+.project
+.class
+*.settings/**
+*.DS_Store
+
 
 # temp ignore
 *.log
