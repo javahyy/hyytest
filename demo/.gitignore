@@ -32,7 +32,7 @@ target/
 .classpath
 
 # idea ignore
-.idea/
+.idea/s
 *.ipr
 *.iml
 *.iws
