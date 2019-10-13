@@ -1,18 +1,48 @@
-﻿demo.iml
-target/**
+﻿# maven ignore
+# target下所有目录及文件
+target/
+*.jar
+*.war
+*.zip
+*.tar
+*.tar.gz
+
+# eclipse ignore
+.settings/
+.project
+.classpath
+
+# idea ignore
+.idea/
+*.ipr
+*.iml
+*.iws
+
+.settings/**
+**/target/**
+out/**
+classes/**
+bak/**
+.gitignore.bak
 .classpath
 .mymetadata
 .project
 .class
-.gitignore.bak
-.settings/**
-backup/**
-debug.sh
-.idea
-bak/**
-**/target/**
-out/**
-*.iml
-classes/**
-*.DS_Store
 *.settings/**
+*.DS_Store
+*.log
+
+
+# temp ignore
+*.log
+*.cache
+*.diff
+*.patch
+*.tmp
+*.java~
+*.properties~
+*.xml~
+
+# system ignore
+.DS_Store
+Thumbs.db
