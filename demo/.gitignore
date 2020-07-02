@@ -1,4 +1,4 @@
-# maven ignore
+﻿# maven ignore
 # target下所有目录及文件
 target/
 *.jar
@@ -30,6 +30,7 @@ bak/**
 .class
 *.settings/**
 *.DS_Store
+*.log
 
 
 # temp ignore
